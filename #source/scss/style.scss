@@ -1,0 +1,123 @@
+@import "nullstyle";
+
+$accent: #e0deda;
+$light: #f9f6f1;
+$dark: #212121;
+$gray: #bab8b5;
+$light-gray: #f4f4f4;
+$dark-gray: #8d8d8d;
+$important: #d84033;
+
+$fz: 14px;
+$lh: 21px;
+
+body {
+	font-family: sans-serif;
+	background-color: $light;
+	color: $dark;
+	font-size: $fz;
+	line-height: $lh;
+}
+.container {
+	margin: 0 5%;
+	padding: 15px 0;
+	position: relative;
+}
+
+.table {
+	width: 50%;
+	border-collapse: collapse;
+	border: 1px solid $accent;
+	margin: 10px 0 0;
+	&-header__title {
+		cursor: pointer;
+		padding: 15px;
+		&::after {
+			content: "⇅";
+		}
+	}
+	&-row {
+		border: 1px solid $accent;
+		height: calc($lh * 2);
+	}
+	& td {
+		text-align: center;
+		font-weight: 300;
+		padding: 0 10px;
+		margin: 10px 0;
+	}
+	&-body {
+		cursor: pointer;
+		.about {
+			//делаем две строки с многоточием
+			// height: calc($lh * 2);
+			-webkit-line-clamp: 2;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	}
+	&-footer {
+		height: 50px;
+		border: 1px solid $accent;
+	}
+}
+.sorted {
+	text-decoration: underline;
+	color: $important;
+}
+.page {
+	cursor: pointer;
+	padding: 15px;
+}
+.current-page {
+	font-weight: 700;
+	text-decoration: underline;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	position: fixed;
+	width: 30%;
+	top: 20%;
+	left: 52%;
+	background-color: $gray;
+	border-radius: 5px;
+	padding: 10px;
+}
+.input {
+	padding: 5px 10px;
+	max-width: 100%;
+	border-radius: 5px;
+}
+.btn {
+	display: inline-block;
+	border-radius: 5px;
+	padding: 10px;
+	cursor: pointer;
+	background-color: $light-gray;
+	border: 1px solid $gray;
+	&:hover {
+		background-color: #fff;
+	}
+}
+
+.selected {
+	background-color: $accent;
+}
+
+.columns-visibilities {
+	display: flex;
+	margin: 20px 0;
+	align-items: center;
+	
+	& label {
+		cursor: pointer;
+		margin: 0 30px 0 5px;
+	}
+}
+
+.hidden {
+	display: none !important;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infotecs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- кнопка для сортировки по возрастанию/убыванию -->
+      <span class="btn sort-reverse">Изменить направление сортировки</span>
+      <!-- чекбоксы для показа/скрытия колонок -->
+      <div class="columns-visibilities">
+        <!-- <input class="column-visibility" checked type="checkbox" class="btn" id="firstName" name="" value="" />
+        <label for="firstName">Имя</label> -->
+      </div>
+      <table class="table">
+        <!-- колонки таблицы -->
+        <thead class="table-header">
+          <tr>
+            <th class="table-header__title firstName">Имя (firstName)</th>
+            <th class="table-header__title lastName">Фамилия (lastName)</th>
+            <th class="table-header__title about">Описание (about)</th>
+            <th class="table-header__title eyeColor">Цвет глаз (eyeColor)</th>
+          </tr>
+        </thead>
+        <!-- данные таблицы -->
+        <tbody class="table-body"></tbody>
+        <!-- страницы таблицы -->
+        <tfoot class="table-footer"></tfoot>
+      </table>
+      <!-- форма редактирования данных выбранной строки -->
+      <form action="" class="form hidden">
+        <input class="input firstName" type="text" placeholder="firstName" />
+        <input class="input lastName" type="text" placeholder="lastName" />
+        <textarea class="input about" rows="10" placeholder="about"></textarea>
+        <input class="input eyeColor" type="text" placeholder="eyeColor" />
+        <input class="btn" type="submit" value="Изменить данные" />
+      </form>
+    </div>
+  </body>
+</html>
